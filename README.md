@@ -9,7 +9,7 @@ Published in the NEALT Proceedings Series by [Linköping University Electronic P
 
 This repository describes the implementation of our approach proposed in the paper. 
 
-## Dataset:
+## Datasets:
 
 name | language | topics | type | paper | source |
 -----| -------- | ------ | ----------------- | ---------------- | --------- |
@@ -18,8 +18,41 @@ name | language | topics | type | paper | source |
  auto-*h*MDS    | de       | 2,100 |  multi-document          | [Link](https://www.aclweb.org/anthology/L18-1510.pdf)          | not publicly available, can be reproduced [here](https://github.com/AIPHES/auto-hMDS)
 
 
-## Checkpoint: 
+## Setup:
 
+The checkpoint for the fine-tuned BART model on the German auto-*h*MDS dataset can be downloaded [here](Link). The checkpoint file can be used to reproduce our results with the following setup. 
+
+### Fine-Tuning: 
+
+We used the BART model based on the fairseq library. More information can be found [here](https://github.com/pytorch/fairseq/blob/master/examples/bart/README.md).  
+
+For fine-tuning on the three datasets (see above) we used the following parameters:
+
+
+```
+  CUDA_VISIBLE_DEVICES=1 fairseq-train hMDS_2-bin \
+    --restore-file bart.large/model.pt \
+    --max-tokens 1024 \
+    --task translation \
+    --source-lang source --target-lang target \
+    --truncate-source \
+    --layernorm-embedding \
+    --share-all-embeddings \
+    --share-decoder-input-output-embed \
+    --reset-optimizer --reset-dataloader --reset-meters \
+    --required-batch-size-multiple 1 \
+    --arch bart_large \
+    --criterion label_smoothed_cross_entropy \
+    --label-smoothing 0.1 \
+    --dropout 0.1 --attention-dropout 0.1 \
+    --weight-decay 0.01 --optimizer adam --adam-betas "(0.9, 0.999)" --adam-eps 1e-08 \
+    --clip-norm 0.1 \
+    --lr-scheduler polynomial_decay --lr 3e-05 \
+    --update-freq 1  \
+    --skip-invalid-size-inputs-valid-test \
+    --find-unused-parameters;
+
+```
 
 
 
