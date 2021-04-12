@@ -1,6 +1,7 @@
 # Error Analysis of using BART for Multi-Document Summarization: A Study for English and German Language
 
-Authors: Timo Johner, Abhik Jana, Chris Biemann
+Authors: Timo Johner, Abhik Jana, Chris Biemann  
+Language Technology Group, Dept. of Informatics, Universitat Hamburg, Germany
 
 Paper: [Link](Link)  
 
@@ -20,7 +21,7 @@ name | language | topics | type | paper | source |
 
 ## Setup:
 
-The checkpoint for the fine-tuned BART model on the German auto-*h*MDS dataset can be downloaded [here](Link). The checkpoint file can be used to reproduce our results with the following setup. 
+The checkpoint for the fine-tuned BART model on the German auto-*h*MDS dataset can be downloaded [here](http://ltdata1.informatik.uni-hamburg.de/nodalida-2021-timo/). The checkpoint file can be used to reproduce our results with the following setup. 
 
 ### Fine-Tuning: 
 
