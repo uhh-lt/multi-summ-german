@@ -3,7 +3,7 @@
 Authors: Timo Johner, Abhik Jana, Chris Biemann  
 Language Technology Group, Dept. of Informatics, Universitat Hamburg, Germany
 
-Paper: [Link](Link)  
+Paper: [Link](https://aclanthology.org/2021.nodalida-main.43.pdf)  
 
 Accepted at the 23rd Nordic Conference on Computational Linguistics ([NoDaLiDa 2021](https://nodalida2021.github.io/)), held from May 31st to June 2nd, 2021. 
 Published in the NEALT Proceedings Series by [Linköping University Electronic Press](Link) and in the [ACL Anthology](Link).
@@ -61,17 +61,15 @@ For fine-tuning on the three datasets (see above) we used the following paramete
 If you find this paper interesting, please cite: 
 
 ```
-@inproceedings{#add,
-    title = "Error Analysis of using BART for Multi-Document Summarization: A Study for English and German Language",
-    author = "Johner, Timo and
-    Abhik, Jana and
-    Chris Biemann
-    booktitle = "#add",
-    month = #add,
-    year = "2021",
-    address = "Online",
-    publisher = "#add",
-    url = "#add",
-    pages = "#add",
+@inproceedings{johner-etal-2021-error, 
+title = "Error Analysis of using {BART} for Multi-Document Summarization: A Study for {E}nglish and {G}erman Language", 
+author = "Johner, Timo  and Jana, Abhik  and Biemann, Chris", 
+booktitle = "Proceedings of the 23rd Nordic Conference on Computational Linguistics (NoDaLiDa)", 
+month = may # " 31--2 " # jun, 
+year = "2021", 
+address = "Reykjavik, Iceland (Online)", 
+publisher = {Link{\"o}ping University Electronic Press, Sweden}, 
+url = "https://aclanthology.org/2021.nodalida-main.43", 
+pages = "391--397", 
 }
 ```
